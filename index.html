@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <script data-require="angular.js@1.2.16" data-semver="1.2.16" src="https://code.angularjs.org/1.2.16/angular.js"></script>
+  <script data-require="jquery@*" data-semver="2.2.0" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script data-require="bootstrap@3.1.1" data-semver="3.1.1" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body ng-controller="myController" ng-cloak shortcuts callback="ShortCutsProcessor()">
+  <h1>{{message}}</h1>
+  <context-help title="Help" helpid="{{helpid}}" limit="0" class="btn btn-link"></context-help>
+  <div context-help title="Help" helpid="{{helpid}}" limit="0" class="btn btn-link"></div>
+
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title">App Help</h4>
+    </div>
+    <div class="modal-body">
+      <iframe src="https://wiki.ubuntu.com/" style="zoom:0.60"
+      frameborder="0" height="450px" width="99.6%"></iframe>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
